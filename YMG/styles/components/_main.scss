@@ -1,0 +1,156 @@
+.main {
+    flex-grow: 1;
+    background: 50% 12% url(../../images/Siemens.gif) no-repeat;
+    margin-top: 90px;
+}
+
+.inputs {
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.vl-1,
+.vl-2,
+.vl-3,
+.vl-4,
+.vl-5,
+.vl-6,
+.vl-7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    width: 100%;
+
+    input {
+        margin: 0 5px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+}
+
+.p-left {
+    width: 33.33%;
+    text-align: end;
+}
+.p-right {
+    display: flex;
+    width: 33.33%;
+}
+
+.wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.inputs {
+    margin-bottom: 10px;
+    background-color: rgba(173, 173, 173, 0.6);
+    border-radius: 5%;
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 5px;  
+}
+.rezult {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: rgba(216, 230, 20, 0.6);
+    border-radius: 5px;
+    font-size: 30px;
+
+    &_1s {
+        border: 2px double;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &_left {
+            display: flex;
+            align-items: center;
+        }
+        &_right {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.name-dv {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 33px;
+}
+
+.check_type {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px 0;
+
+    h2 {
+        font-size: 30px;
+        margin: 0 10px;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    #button_cancel {
+        margin-right: 30px;
+    }
+}
+
+sub {
+    font-size: 20px;
+}
+
+.temp_post,
+i {
+    font-size: 30px;
+}
+
+.valid {
+    background-color: rgb(255, 0, 13);
+    transition: 0.3s linear;
+}
+
+.disabled {
+    display: none;
+}
+
+.animation {
+    margin-top: 15%;
+    text-align: center;
+}
+
+@media screen and (max-width: 499px) {
+    .main {
+        margin-top: 70px;
+    }
+
+}
+
+@media screen and (max-width: 399px) {
+    .rezult {
+        width: 310px;
+    }
+    .main {
+        margin-top: 70px;
+    }
+}

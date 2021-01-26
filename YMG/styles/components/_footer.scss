@@ -1,0 +1,21 @@
+.footer {
+    text-align: center;
+    background-color: rgb(128, 17, 17);
+    color: #fff;
+    padding: 10px 10px;
+    font-size: 35px;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+@media screen and (max-width: 699px) {
+    .footer {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .footer {
+        font-size: 22px;
+    }
+}

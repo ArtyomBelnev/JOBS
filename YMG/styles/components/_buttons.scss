@@ -1,0 +1,134 @@
+#button_cancel {
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s linear;
+    font-size: 30px;
+
+    background-color: rgb(247, 11, 11);
+    color: #ffffff;
+
+    &:hover {
+        color: black;
+        transition: 0.5s linear;
+    }
+    &:active {
+        transition: 0.3s linear;
+        margin-top: 3px;
+    }
+}
+.return {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#button_return {
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s linear;
+    font-size: 30px;
+
+    background-color: rgb(156, 154, 12);
+    color: #ffffff;
+
+    &:hover {
+        color: black;
+        transition: 0.5s linear;
+    }
+    &:active {
+        transition: 0.3s linear;
+        margin-top: 3px;
+    }
+}
+
+#button_cancel:disabled,
+#button_ok:disabled {
+    background: rgba(173, 173, 173, 0.6);
+    cursor: inherit;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+#button_ok {
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s linear;
+    font-size: 30px;
+
+    background-color: rgb(16, 204, 41);
+    color: #ffffff;
+
+    &:hover {
+        color: black;
+        transition: 0.5s linear;
+    }
+    &:active {
+        transition: 0.3s linear;
+        margin-top: 3px;
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 30px;
+}
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(95, 24, 68);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: rgb(24, 87, 95);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
