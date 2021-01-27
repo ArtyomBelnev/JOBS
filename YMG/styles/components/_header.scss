@@ -1,38 +1,52 @@
 .header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    background-color: rgb(17, 39, 163);
-    color: #fff;
-    padding: 10px 10px;
-    font-size: 35px;
-    font-family: 'Ubuntu', sans-serif;
-    z-index: 100;
-       
-    h1 {
-        text-align: center;
-    }
+    margin-top: 10px;
 
-    #btn_popup {
-        cursor: pointer;
+   &_left,
+   &_center,
+   &_right {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 30px;
+       width: 33.33%;
+       padding: 2px;
+       font-family: 'Ubuntu', sans-serif;
+   }
+
+   &_center {
+       & span {
+        font-size: 2.25vw;
+        color: #ffffff;
+        border-radius: 5px;
+        padding: 5px 10px;
+        background-color: $all_blue;
+        font-size: calc(20px + 30px * (100vw / 1880));
+       }
+    
+   }
+
+   &_right {
+       display: flex;
+       font-size: 2.1vw;
+    //    flex-direction: column;
+
+       #dat {
+        background-color: $all_blue;
+        color: #ffffff;
+        border-radius: 5px;
         margin-left: 10px;
-        padding: 1px;
-        transition: 0.3s linear;
-
-        &:hover {
-            transition: 0.3s linear;
-            color: #e1fa03;
-        }
-
-        img {
-            width: 35px;
-        }
-    }
+        padding: 2px;
+       }
+       
+       span {
+        // font-size: 2.2vw;
+           color: #ffffff;
+           border-radius: 5px;
+           padding: 2px;
+           background-color: $all_blue;
+       }
+   }
 }
 
 
@@ -42,8 +56,8 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: #fff;
-    z-index: 20000;
+    background: $all_blue;
+    z-index: 2;
     transition: 1s all;
     opacity: 1;
     visibility: visible;
@@ -51,9 +65,9 @@
     .loader {
         width: 75px;
         height: 75px;
-        border: 10px solid rgb(17, 39, 163);
+        border: 10px solid #ffffff;
         border-radius: 50%;
-        border-top-color: rgb(255, 0, 13);
+        border-top-color: $all_blue;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -73,22 +87,5 @@
     }
     to {
         transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-.header_fixed {
-    opacity: 0.85;
-}
-
-@media screen and (max-width: 699px) {
-    .header {
-        font-size: 28px;
-    }
-}
-
-@media screen and (max-width: 499px) {
-    .header {
-        font-size: 21px;
-        padding: 10px 5px;
     }
 }

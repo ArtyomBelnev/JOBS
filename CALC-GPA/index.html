@@ -3,87 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0"/>
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="shortcut icon" href="./images/favicons.png" type="image/x-icon">
-    <title>Несвижское УМГ</title>
-    <script src="./js/main.js?updated=2" defer></script>
+    <link rel="shortcut icon" href="./images/calculator.ico" type="image/x-icon">
+    <title>Расчеты</title>
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
+
     <div id="page__preloader" class="preloader">
         <div class="loader"></div>
     </div>
-   <header class="header">
-       <div class="header_left"><img src="./images/logo.png" alt=""></div>
-       <div class="header_center"><span>ДОСКА ОБЪЯВЛЕНИЙ</span></div>
-       <div class="header_right">
-       <div id="clock">
-        <span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec">ss</span>
-      </div>
-      <div id="dat"></div>
-    </div>
-   </header>
-   <main class="main">
-    <div class="slider">
-        <div class="slider__ul">
-            <li class="slider__li slider__li_active">
-                <div class="wrap__blocks">
-                    <div class="block">
-                        <div class="images-block">
-                            <img src="./images/11.gif" alt="">
-                        </div>
-                    </div>
-                    <div class="block">
-                        <div class="block__header"><img src="./images/slider/11.jpg" alt=""></div>
-                        <div class="block__text">Выручка «Газпром нефти» за 6 месяцев 2018 года увеличилась на 24,4% по сравнению с аналогичным показателем прошлого года и составила 1 трлн 137,7 млрд руб. Положительная конъюнктура рынка нефти и нефтепродуктов, увеличение добычи на новых проектах компании и эффективные действия менеджмента «Газпром нефти» обеспечили рост показателя скорректированная EBITDA (прибыль до уплаты процентов, налога на прибыль и амортизации) на 49,8% по сравнению с уровнем первого полугодия 2017 года — до 368,2 млрд руб. Чистая прибыль, относящаяся к акционерам ПАО «Газпром нефть», за 6 месяцев 2018 года составила 166,4 млрд руб., увеличившись на 49,6%. Рост операционного денежного потока компании, а также завершение основных инфраструктурных инвестиций на новых проектах в добыче обеспечили получение положительного свободного денежного потока за первое полугодие 2018 года в размере 47,5 млрд руб.</div>
-                    </div>
-                    <div class="block">
-                        <div class="block__header"><img src="./images/slider/3.jpg" alt=""></div>
-                        <div class="block__text">«Газпром нефть» и Российский футбольный союз (РФС) заключили соглашение, в рамках которого сеть АЗС «Газпромнефть» становится официальным топливным партнером мужской сборной России по футболу и РФС. «Газпром нефть» будет сотрудничать с национальной командой в ходе отборочных матчей Чемпионата Европы-2020 и Чемпионата мира-2022, игр Лиги Наций УЕФА сезона 2020/21, а также международных товарищеских встреч. Также моторные масла под брендом Gazpromneft получают статус официальных моторных масел сборной России и РФС. «Лидер российской нефтяной индустрии — „Газпром нефть“ — делает очень многое для развития спорта и популяризации здорового образа жизни в нашей стране. При этом продукция компании известна своим высоким качеством. Мы очень рады началу сотрудничества брендов „Газпром нефти“, РФС и нашей мужской национальной сборной»</div>
-                    </div>
-                    <!-- <div class="block">
-                        <div class="block__header"><img src="./images/slider/4.jpg" alt=""></div>
-                        <div class="block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, voluptatem. Expedita explicabo hic amet atque quidem inventore iste perspiciatis, aliquid illum omnis asperiores officiis labore magnam rerum voluptates repellat laborum.
-                        Assumenda natus dolorem, eos cumque quae dicta explicabo. Aut veritatis nesciunt aspernatur in facere suscipit magnam quaerat placeat, recusandae fugit nisi qui rem pariatur repudiandae, accusantium blanditiis nemo ullam voluptas?
-                        Voluptate voluptas nihil atque corrupti ipsa cum neque unde voluptates inventore harum. Iste doloribus eaque nam nemo, harum ad voluptate quaerat sapiente ducimus provident, dicta ipsa possimus dolores mollitia nesciunt.
-                        Repellendus autem sed magni? Accusamus doloremque distinctio suscipit exercitationem saepe dolores, officiis cumque ad velit voluptatum repudiandae aperiam deserunt consectetur et vero culpa fuga! Debitis amet consequuntur quas odit cum.
-                        Magnam quas optio alias odit cumque aliquid! Quam culpa velit animi asperiores laboriosam, sunt placeat nesciunt nulla dicta illum et illo tempora provident reiciendis amet in? Minima quidem corporis et.</div>
-                    </div> -->
-                </div>
-            </li>
-            <li class="slider__li">
-                <div class="wrap__blocks">
-                    <div class="block">
-                        <div class="block__header"><img src="./images/slider/4.jpg" alt=""></div>
-                        <div class="block__text">"Газпром нефть" в течение месяца бесплатно обеспечит бензином и дизельным топливом транспорт медицинских и социальных служб, находящихся в ведомстве Минздрава и Минтруда.
-                            Компания помогает региону в рамках программы по противодействию распространению коронавирусной инфекции. С помощью топливных карт автомобили медицинских и социальных служб будут заправляться на 81 АЗС сети "Газпромнефть" в регионе. Александр Бурков поблагодарил компанию за её вклад в борьбе с инфекцией.</div>
-                    </div>
-                    <div class="block">
-                        <div class="block__header"><img src="./images/slider/1.jpg" alt=""></div>
-                        <div class="block__text">Зампредседателя правления — главным бухгалтером ПАО «Газпром» назначили Михаила Россеева. Ранее занимавшая эту должность Елена Васильева уходит на пенсию.
-
-                            Как сообщили в пресс-службе «Газпрома», решения о прекращении полномочий Елены Васильевой и наделении ими Россеева примет совет директоров компании.
-                            
-                            Первым заместителем гендиректора ООО «Газпром экспорт» назначили зампреда правления — руководителя аппарата правления Михаила Середу. Он также встанет во главе создаваемой стопроцентной дочерней компании холдинга — ООО «Газпром трейдинг». Прежняя должность Середы ликвидируется.
-                            
-                            Гендиректором ООО «Газпром трансгаз Томск» стал Владислав Бородин, который ранее работал замначальником Департамента 645 Газпрома. Ранее занимавший эту должность Анатолий Титов уходит на пенсию.
-                            
-                            Сменится и гендиректор ООО «Газпром добыча Оренбург» — уходит на пенсию Владимир Кияев и на его место берут Олега Николаева, который до этого работал главным инженером — первым замдиректора ООО «Газпром добыча Ямбург».</div>
-                    </div>
-                </div>
-            </li>
+    <header class="header content">
+        <h1>Расчет производительности ГПА</h1>
+        <h2 id="btn_popup"><img src="./images/book.png" alt=""></h2>
+    </header>
+    <main class="main content">
+        <div class="wraper">
+            <!-- <h2 class="name-dv">Тип ГПА:</h2> -->
+            <div class="check_type">
+                <h2>ГПА-Ц-6,3</h2>
+                <!-- <label class="switch">
+                    <input id="button_check" type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                <h2>ГПА Ц-16</h2> -->
             </div>
-        <div class="slider__pages-block">
-            <ul class="slider__pages-ul">
-                <li class="slider__pages-li slider__pages-li_active" data-target="0"></li>
-                <li class="slider__pages-li" data-target="1"></li>
-            </ul>
+        </div>
+        <div class="inputs">
+            <div class="vl-1">
+                <p class="p-left"><i>P<sub> вx.н.</sub> =</i></p>
+                <input type="text"  id="p_in" class="temp_post" placeholder="0" size="3" onkeyup="check();">
+                <p class="p-right">МПа</p>
+            </div>
+            <div class="vl-2">
+                <p class="p-left"><i>P<sub> выx.н.</sub> =</i></p>
+                <input type="text"  id="p_out" class="temp_post" placeholder="0" size="3" onkeyup="check();">
+                <p class="p-right">МПа</p>
+            </div>
+            <div class="vl-3">
+                <p class="p-left"><i>T<sub> вx.н.</sub> =</i></p>
+                <input type="text" id="t_in" class="temp_post" placeholder="0" size="3" onkeyup="check();">
+                <p class="p-right">&#8451;</p>
+            </div>
+            <div class="vl-4">
+                <p class="p-left"><i>T<sub> выx.н.</sub> =</i></p>
+                <input type="text" id="t_out" class="temp_post" placeholder="0" size="3" onkeyup="check();">
+                <p class="p-right">&#8451;</p>
+            </div>
+            <div class="vl-5">
+                <p class="p-left"><i>dP<sub>конф.</sub> =</i></p>
+                <input type="text" id="p_n" class="temp_post" placeholder="0" size="3" onkeyup="check();">
+                <p class="p-right">кПa</p> 
+            </div>
+            <div class="vl-6">
+                <p class="p-left"><i>n<sub>cт</sub> =</i></p>
+                <input type="text" id="n_st" class="temp_post" placeholder="0" size="3" onkeyup="check();">
+                <p class="p-right">об/мин</p> 
+            </div>
+            <div class="vl-7">
+                <p class="p-left"><i>&rho;<sub>0</sub> =</i></p>
+                <input type="text" id="p_0" class="temp_post" placeholder="0" size="3" onkeyup="check();">
+                <p class="p-right">кг/м<sup>3</sup></p> 
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="button_cancel" disabled>Отмена</button>
+            <button id="button_ok" disabled>Рассчитать</button>
+        </div>
+        <div class="animation disabled">
+            <img src="./images/loading-54.gif" alt="">
+        </div>
+        <div class="rezult disabled">
+            <div class="rezult_1s">
+                <div class="rezult_1s_left">Произв. коммерч. :</div>
+                <div class="rezult_1s_right" id="Q_pr"></div>
+            </div>
+            <div class="rezult_1s">
+                <div class="rezult_1s_left">Произв. объемная :</div>
+                <div class="rezult_1s_right" id="Q_1n"></div>
+            </div>
+            <div class="rezult_1s">
+                <div class="rezult_1s_left">Мощность ЦБН :</div>
+                <div class="rezult_1s_right" id="N_i"></div>
+            </div>
+            <div class="rezult_1s">
+                <div class="rezult_1s_left">Степень сжатия :</div>
+                <div class="rezult_1s_right" id="E_i"></div>
+            </div>
+        </div>
+        <div class="return ">
+            <button id="button_return" class="disabled">
+                Назад
+            </button>
+        </div>
+    </main>
+    <footer class="footer content">
+        <h1>Несвижкое УМГ 2020 г. </h1>
+    </footer>
+    <div id="popup" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__close">X</div>
+                <div class="popup__title">Cправка</div>
+                <div class="popup__text">
+                   <p>Все формулы были взяты с "МЕТОДИКИ ПРОВЕДЕНИЯ ЭНЕРГОАУДИТА КОМПРЕССОРНОЙ СТАНЦИИ, КОМПРЕССОРНЫХ ЦЕХОВ С ГАЗОТУРБИННЫМИ И ЭЛЕКТРОПРИВОДНЫМИ ГПА"
+                    СТО Газпром 2"1.20"122"2007</p> 
+                   <h3>Автор сайта: <span>А.О. Бельнев (a.belnev@btg.by)</span></h3>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="run__str">
-        <marquee behavior="alternate" direction="left">23.01.2021 рабочий день до 14:00 !!!</marquee>
-        <!-- <marquee behavior="scroll" direction="left">C НОВЫМ ГОДОМ ДРУЗЬЯ!</marquee> -->
-    </div>
-   </main>
 </body>
 </html>
