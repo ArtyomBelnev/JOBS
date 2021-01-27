@@ -113,7 +113,7 @@ function getRez() {
         Mt = (Math.log10(T_OUT/T_IN))/(Math.log10(P_OUT/P_IN)),
         K = 4.16 + 0.0041*(((+t_in.value)+(+t_out.value))/2-10)+3.93*(AIR - 0.55)+5*(Mt-0.3),
         N = K*Zsr*R*((+t_out.value)-(+t_in.value))*Gn,
-        E = P_OUT/P_IN,
+        E = (P_OUT + 0.1016)/(P_IN + 0.1016),
         dNm = 100*Math.pow((+n_st.value/Nsto),1.5),
         Ne = dNm + N;
         
