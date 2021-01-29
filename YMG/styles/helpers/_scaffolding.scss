@@ -8,3 +8,12 @@ body {
 * {
     font-family: 'Ubuntu', sans-serif;
 }
+
+
+
+@media screen and (min-height: 1079px) {
+  .header {
+      font-size: 28px;
+  }
+}
+
