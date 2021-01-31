@@ -1,204 +1,230 @@
 .main {
-    background: url(../../images/cooperation.jpg) 50% 65%  no-repeat;
-    height: 100%;
+  background: url(../../images/cooperation.jpg) 50% 65% no-repeat;
+  height: 100%;
 }
 .slider {
-    height: 80%;
+  height: 80%;
 }
 .slider__ul {
-    position: relative;
-    height: 100%;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+  position: relative;
+  height: 100%;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 .slider__li {
-    position: absolute;
-    list-style-type: none;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity .4s linear;
+  position: absolute;
+  list-style-type: none;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s linear;
 }
 
 .wrap__blocks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 98%;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 98.5%;
+  width: 100%;
+.block:ht
+  .block {
+    width: 32%;
+    margin-left: 1%;
+    margin-right: 1%;
+    box-shadow: 0 0 10px $all_blue;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
 
-    .block {
-        width: 32%;
-        margin-left: 1%;
-        margin-right: 1%;
-        box-shadow: 0 0 10px $all_blue;
-        border-radius: 5px;
-        background-color: rgb(255, 255, 255);
-
-        &::after {
-          content: '';
-          display: block;
-          width: 700px;
-        }
-
-        &__up {
-            padding: 10px;
-        }
-
-        &__header {
-            float:left;
-            margin: 4px 5px 0px 0px;
-
-            & img {
-                max-width: 280px;
-                width: 100%;
-            }
-        }
-                
-     &__text {
-        font-size: 1.1vw;
-         line-height: 1.2;
-         font-family: 'Ubuntu', sans-serif;
-     }    
+    &::after {
+      content: "";
+      display: block;
+      width: 100vw;
     }
 
-
-    .block:nth-child(2) {
-        margin-left: 0;
-        margin-right: 0;
+    &__up {
+      padding: 10px;
     }
+
+    &__header {
+      float: left;
+      margin: 4px 5px 0px 0px;
+
+      & img {
+        max-width: 280px;
+        width: 100%;
+      }
+    }
+
+    &__text {
+      font-size: 1.1vw;
+      line-height: 1.2;
+      font-family: "Ubuntu", sans-serif;
+    }
+  }
+
+  .block:nth-child(2) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .slider__li_active {
-    opacity: 1;
+  opacity: 1;
 }
 .slider__img {
-    display: block;
-    width: 100%;
-    height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .slider__pages-block {
-    display: none;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    margin-left: -61.5px;
-    padding: 5px 10px;
-    box-shadow: 0 0 10px 7px rgba(0,0,0,.4);
-    border-radius: 5px;
-    background-color: rgb(155, 177, 59);
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -61.5px;
+  padding: 5px 10px;
+  box-shadow: 0 0 10px 7px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  background-color: rgb(155, 177, 59);
 }
 .slider__pages-ul {
-    display: flex;
+  display: flex;
 }
 .slider__pages-li {
-    display: block;
-    margin-left: 7px;
-    border-radius: 50%;
-    background-color: red;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-    transition: background-color .4s linear;
+  display: block;
+  margin-left: 7px;
+  border-radius: 50%;
+  background-color: red;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  transition: background-color 0.4s linear;
 }
 .slider__pages-li:hover {
-    background-color: blue;
+  background-color: blue;
 }
 .slider__pages-li_active {
-    background-color: blue;
+  background-color: blue;
 }
 .slider__pages-li:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .run__str {
-    z-index: 100;
-    background-color: $all_blue;
-    color: aliceblue;
-    // width: 100%;
-    font-size: 1.5em;
-    // white-space: nowrap;
-    font-weight: 600;
-    word-spacing: 5px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    // animation: anim 30s linear infinite;
+  z-index: 100;
+  background-color: #d00000;
+  color: #fff;
+  // width: 100%;
+  font-size: 1.5em;
+  // white-space: nowrap;
+  font-weight: 600;
+  word-spacing: 5px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  // animation: anim 30s linear infinite;
 }
 
 .images-block {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+  & img {
     height: 100%;
     width: 100%;
-
-    & img {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        object-fit: cover;
-        top: 0;
-        left: 0;
-        border-radius: 5px;
-    }
+    position: absolute;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+  }
 }
 
 marquee {
-    padding: 5px;
+  padding: 5px;
 }
-
 
 .happy {
   padding: 5px;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  width: 100%;
   height: 100%;
-  // background-image: url(../../images/news/happy.jpg);
+  background: url(../../images/news/happy.jpg) no-repeat;
 
+  .happy__text {
+    p {
+      font-family: "Ubuntu", sans-serif;
+      color: #f7f1f1;
+      font-size: 30px;
+    }
+  }
   &__top {
     padding-top: 10px;
-    text-align: center;
-    font-size: 30px;
-    color: #ffffff;
-    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+
+    p {
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px 10px;
+      background-color: rgb(245, 209, 6);
+      font-size: 30px;
+      color: #000000;
+      font-family: "Ubuntu", sans-serif;
+    }
   }
   &__wrap {
     display: flex;
     align-items: center;
-    
+    margin-bottom: 5%;
+
     .wrap__img {
+      position: relative;
+      overflow: hidden;
+      height: 100px;
+      width: 100px;
+      margin-right: 2%;
+
       img {
-        max-width: 120px;
-        max-height: 120px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
       }
     }
 
     .wrap__name {
-      font-family: 'Ubuntu', sans-serif;
-      color: blue;
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px 10px;
+      background-color: #ffffff;
+      font-family: "Ubuntu", sans-serif;
+      color: #000000;
+      font-size: 25px;
     }
   }
 }
 // #one  {
-   
+
 // }
 // @keyframes anim {
 //     0%{transform: translateX(50%);}
 //     50%,100%{transform: translateX(-100%);}
 // }
 
-
-
 @media screen and (max-height: 980px) {
   .main {
-    background: url(../../images/cooperation.jpg) 50% 85%  no-repeat;
-    
-}
+    background: url(../../images/cooperation.jpg) 50% 85% no-repeat;
+  }
 
-.slider {
-  height: 78%;
-}
+  .slider {
+    height: 78%;
+  }
 }

@@ -15,7 +15,7 @@ document.body.onload = function() {
 }
 
 class Slider {
-    constructor(images, buttons, pages, duration = 20000) {
+    constructor(images, buttons, pages, duration = 10000) {
         this.images = images;
         this.buttons = buttons;
         this.pages = pages;

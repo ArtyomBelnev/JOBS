@@ -1,6 +1,7 @@
 .header {
     display: flex;
-    margin-top: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 
    &_left,
    &_center,
@@ -19,7 +20,7 @@
         font-size: 2.25vw;
         color: #ffffff;
         border-radius: 5px;
-        padding: 5px 10px;
+        padding: 7px 10px;
         background-color: $all_blue;
         font-size: calc(20px + 30px * (100vw / 1880));
        }
@@ -29,22 +30,36 @@
    &_right {
        display: flex;
        font-size: 2.1vw;
-    //    flex-direction: column;
+      //  background-color: $all_blue;
+      //  font-size: 2.1vw;
+       flex-direction: column;
 
-       #dat {
+       #clock {
         background-color: $all_blue;
         color: #ffffff;
+        padding: 0 5px;
         border-radius: 5px;
-        margin-left: 10px;
-        padding: 2px;
        }
+
+       #dat {
+        font-size: 1vw;
+        text-align: center;
+        background-color: #ffffff;
+        color: #000;
+        // border-radius: 5px;
+        margin: 0 auto;
+        margin-bottom: 1px;
+       }
+
+      //  #clock {
+      //    font-size: 1.1vw;
+      //  }
        
        span {
-        // font-size: 2.2vw;
            color: #ffffff;
            border-radius: 5px;
-           padding: 2px;
-           background-color: $all_blue;
+           padding: 1px;
+          //  background-color: $all_blue;
        }
    }
 }

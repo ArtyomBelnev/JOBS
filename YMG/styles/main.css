@@ -81,11 +81,18 @@ body {
   margin: 0 auto;
 }
 
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .header_left, .header_center, .header_right {
@@ -108,7 +115,7 @@ body {
   font-size: 2.25vw;
   color: #ffffff;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 7px 10px;
   background-color: #0063a7;
   font-size: calc(20px + 30px * (100vw / 1880));
 }
@@ -118,21 +125,32 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-size: 2.1vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header_right #clock {
+  background-color: #0063a7;
+  color: #ffffff;
+  padding: 0 5px;
+  border-radius: 5px;
 }
 
 .header_right #dat {
-  background-color: #0063a7;
-  color: #ffffff;
-  border-radius: 5px;
-  margin-left: 10px;
-  padding: 2px;
+  font-size: 1vw;
+  text-align: center;
+  background-color: #ffffff;
+  color: #000;
+  margin: 0 auto;
+  margin-bottom: 1px;
 }
 
 .header_right span {
   color: #ffffff;
   border-radius: 5px;
-  padding: 2px;
-  background-color: #0063a7;
+  padding: 1px;
 }
 
 .preloader {
@@ -212,8 +230,8 @@ body {
   top: 0;
   left: 0;
   opacity: 0;
-  -webkit-transition: opacity .4s linear;
-  transition: opacity .4s linear;
+  -webkit-transition: opacity 0.4s linear;
+  transition: opacity 0.4s linear;
 }
 
 .wrap__blocks {
@@ -225,7 +243,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 98%;
+  height: 98.5%;
   width: 100%;
 }
 
@@ -240,9 +258,9 @@ body {
 }
 
 .wrap__blocks .block::after {
-  content: '';
+  content: "";
   display: block;
-  width: 700px;
+  width: 100vw;
 }
 
 .wrap__blocks .block__up {
@@ -262,7 +280,7 @@ body {
 .wrap__blocks .block__text {
   font-size: 1.1vw;
   line-height: 1.2;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .wrap__blocks .block:nth-child(2) {
@@ -307,8 +325,8 @@ body {
   width: 15px;
   height: 15px;
   cursor: pointer;
-  -webkit-transition: background-color .4s linear;
-  transition: background-color .4s linear;
+  -webkit-transition: background-color 0.4s linear;
+  transition: background-color 0.4s linear;
 }
 
 .slider__pages-li:hover {
@@ -325,8 +343,8 @@ body {
 
 .run__str {
   z-index: 100;
-  background-color: #0063a7;
-  color: aliceblue;
+  background-color: #d00000;
+  color: #fff;
   font-size: 1.5em;
   font-weight: 600;
   word-spacing: 5px;
@@ -345,8 +363,8 @@ body {
   height: 100%;
   width: 100%;
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   top: 0;
   left: 0;
   border-radius: 5px;
@@ -366,16 +384,34 @@ marquee {
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 5px;
-  width: 100%;
   height: 100%;
+  background: url(../../images/news/happy.jpg) no-repeat;
+}
+
+.happy .happy__text p {
+  font-family: "Ubuntu", sans-serif;
+  color: #f7f1f1;
+  font-size: 30px;
 }
 
 .happy__top {
   padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.happy__top p {
   text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #f5d106;
   font-size: 30px;
-  color: #ffffff;
-  font-family: 'Ubuntu', sans-serif;
+  color: #000000;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .happy__wrap {
@@ -385,16 +421,36 @@ marquee {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 5%;
+}
+
+.happy__wrap .wrap__img {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+  margin-right: 2%;
 }
 
 .happy__wrap .wrap__img img {
-  max-width: 120px;
-  max-height: 120px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
 }
 
 .happy__wrap .wrap__name {
-  font-family: 'Ubuntu', sans-serif;
-  color: blue;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
+  color: #000000;
+  font-size: 25px;
 }
 
 @media screen and (max-height: 980px) {
