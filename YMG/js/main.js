@@ -1,6 +1,3 @@
-  
-
-console.log(22);
 document.body.onload = function() {
 
     setTimeout(function() {
@@ -87,7 +84,7 @@ const images = document.querySelectorAll(".slider__li");
     const pages = document.querySelectorAll(".slider__pages-li");
     const page = document.querySelector(".slider__pages-block");
     const sliderBlock = document.querySelector(".slider");
-
+    
     const slider = new Slider(images,buttons,pages);
     
     slider.startSlideShow();
@@ -131,10 +128,35 @@ const images = document.querySelectorAll(".slider__li");
 
     function dateStart() {
         let textDate = document.getElementById('dat');
+        let hpDay = document.getElementById('hpDay');
         let today = new Date().toLocaleDateString();
+        let m;
+        let n = today.slice(1,2);
+
+        switch(today.slice(3,5)) {
+          case '01': m = 'января'; break;
+          case '02': m = 'февраля'; break;
+          case '03': m = 'марта'; break;
+          case '04': m = 'апреля'; break;
+          case '05': m = 'мая'; break;
+          case '06': m = 'июня'; break;
+          case '07': m = 'июля'; break;
+          case '08': m = 'августа'; break;
+          case '09': m = 'сентября'; break;
+          case '10': m = 'октября'; break;
+          case '11': m = 'ноября'; break;
+          case '12': m = 'декабря'; break;
+        }
+
+    
+
+        hpDay.innerHTML= `Сегодня ${n} ${m}`;
 
         textDate.innerHTML = today;
     }
 
     clockStart();
     dateStart();
+
+    
+    

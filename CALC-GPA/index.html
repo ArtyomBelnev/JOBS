@@ -23,51 +23,51 @@
     </header>
     <main class="main content">
         <div class="wraper">
-            <!-- <h2 class="name-dv">Тип ГПА:</h2> -->
             <div class="check_type">
                 <h2>ГПА-Ц-6,3</h2>
-                <!-- <label class="switch">
-                    <input id="button_check" type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                <h2>ГПА Ц-16</h2> -->
+                <div>
+                  <p id="nGPA">1</p>
+                  <button disabled id="nGPA_D">-</button>
+                  <button id="nGPA_U">+</button>
+                </div>
             </div>
         </div>
+      
         <div class="inputs">
             <div class="vl-1">
-                <p class="p-left"><i>P<sub> вx.н.</sub> =</i></p>
-                <input type="text"  id="p_in" class="temp_post" placeholder="0" size="3" onkeyup="check();">
-                <p class="p-right">МПа</p>
+              <div class="input_left"><p><i>P<sub> вx.н.</sub> =</i></p></div>
+              <div class="input_center"><div id="ins_vl-1"></div></div>
+              <div class="input_right"><p>МПа</p></div> 
             </div>
             <div class="vl-2">
-                <p class="p-left"><i>P<sub> выx.н.</sub> =</i></p>
-                <input type="text"  id="p_out" class="temp_post" placeholder="0" size="3" onkeyup="check();">
-                <p class="p-right">МПа</p>
+              <div class="input_left"><p><i>P<sub> выx.н.</sub> =</i></p></div>
+              <div class="input_center"><div id="ins_vl-2"></div></div>
+              <div class="input_right"><p>МПа</p></div> 
             </div>
             <div class="vl-3">
-                <p class="p-left"><i>T<sub> вx.н.</sub> =</i></p>
-                <input type="text" id="t_in" class="temp_post" placeholder="0" size="3" onkeyup="check();">
-                <p class="p-right">&#8451;</p>
+              <div class="input_left"><p><i>T<sub> вx.н.</sub> =</i></p></div>
+              <div class="input_center"><div id="ins_vl-3"></div></div>
+              <div class="input_right"><p>&#8451;</p></div>   
             </div>
             <div class="vl-4">
-                <p class="p-left"><i>T<sub> выx.н.</sub> =</i></p>
-                <input type="text" id="t_out" class="temp_post" placeholder="0" size="3" onkeyup="check();">
-                <p class="p-right">&#8451;</p>
+              <div class="input_left"><p><i>T<sub> выx.н.</sub> =</i></p></div>
+              <div class="input_center"><div id="ins_vl-4"></div></div>
+              <div class="input_right"><p>&#8451;</p></div>  
             </div>
             <div class="vl-5">
-                <p class="p-left"><i>dP<sub>конф.</sub> =</i></p>
-                <input type="text" id="p_n" class="temp_post" placeholder="0" size="3" onkeyup="check();">
-                <p class="p-right">кПa</p> 
+              <div class="input_left"><p><i>dP<sub>конф.</sub> =</i></p></div>
+              <div class="input_center"><div id="ins_vl-5"></div></div>
+              <div class="input_right"><p>кПa</p></div>     
             </div>
             <div class="vl-6">
-                <p class="p-left"><i>n<sub>cт</sub> =</i></p>
-                <input type="text" id="n_st" class="temp_post" placeholder="0" size="3" onkeyup="check();">
-                <p class="p-right">об/мин</p> 
+              <div class="input_left"><p><i>n<sub>cт</sub> =</i></p></div>
+              <div class="input_center"><div id="ins_vl-6"></div></div>
+              <div class="input_right"><p>об/мин</p></div>    
             </div>
             <div class="vl-7">
-                <p class="p-left"><i>&rho;<sub>0</sub> =</i></p>
-                <input type="text" id="p_0" class="temp_post" placeholder="0" size="3" onkeyup="check();">
-                <p class="p-right">кг/м<sup>3</sup></p> 
+              <div class="input_left"><p><i>&rho;<sub>0</sub> =</i></p></div>
+              <div class="input_center"><div id="ins_vl-7"></div></div>
+              <div class="input_right"><p>кг/м<sup>3</sup></p></div>       
             </div>
         </div>
         <div class="buttons">

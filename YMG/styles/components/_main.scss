@@ -28,7 +28,7 @@
   justify-content: center;
   height: 98.5%;
   width: 100%;
-.block:ht
+
   .block {
     width: 32%;
     margin-left: 1%;
@@ -48,17 +48,18 @@
     }
 
     &__header {
-      float: left;
-      margin: 4px 5px 0px 0px;
+      // float: left;
+      // margin: 4px 5px 0px 0px;
 
       & img {
-        max-width: 280px;
+        // max-width: 280px;
         width: 100%;
       }
     }
 
     &__text {
-      font-size: 1.1vw;
+      padding: 10px 0;
+      font-size: 1.3rem;
       line-height: 1.2;
       font-family: "Ubuntu", sans-serif;
     }
@@ -156,27 +157,32 @@ marquee {
   background: url(../../images/news/happy.jpg) no-repeat;
 
   .happy__text {
+    padding-left: 10px;
+    font-size: 1.6em;
+
     p {
       font-family: "Ubuntu", sans-serif;
       color: #f7f1f1;
-      font-size: 30px;
+      padding-top: 5px;
     }
   }
   &__top {
-    padding-top: 10px;
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 209, 6);
+    border-radius: 5px;
+    width: 45%;
     justify-content: center;
+    font-size: 2rem;
 
     p {
       text-align: center;
-      border-radius: 5px;
-      padding: 5px 10px;
-      background-color: rgb(245, 209, 6);
-      font-size: 30px;
       color: #000000;
       font-family: "Ubuntu", sans-serif;
     }
   }
+
   &__wrap {
     display: flex;
     align-items: center;
@@ -226,5 +232,49 @@ marquee {
 
   .slider {
     height: 78%;
+  }
+
+    .images-block img {
+      object-fit: cover;
+    }
+}
+
+
+@media screen and (max-height: 900px) {
+  .main {
+    background: url(../../images/cooperation.jpg) 50% 92% no-repeat;
+  }
+
+  .block {
+    .block__text {
+      font-size: 1.1rem;
+    }
+  } 
+}
+
+@media screen and (max-width: 1441px) {
+  .block {
+    .block__text {
+      font-size: 1rem;
+    }
+  }
+  
+  .happy {
+
+    .happy__top {
+      font-size: 1.6rem;
+    }
+     
+    .happy__text {
+      font-size: 1.3em;
+    }
+
+    &__wrap {
+       
+      .wrap__img {
+        height: 80px;
+        width: 80px;
+      }
+    }
   }
 }
