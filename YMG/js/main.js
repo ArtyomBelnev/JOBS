@@ -131,7 +131,11 @@ const images = document.querySelectorAll(".slider__li");
         let hpDay = document.getElementById('hpDay');
         let today = new Date().toLocaleDateString();
         let m;
-        let n = today.slice(1,2);
+        let n = today.slice(0,2);
+
+        if(n < 10 ) {
+          n = today.slice(1,2);
+        }
 
         switch(today.slice(3,5)) {
           case '01': m = 'января'; break;
