@@ -1,94 +1,93 @@
 .header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    background-color: rgb(17, 39, 163);
-    color: #fff;
-    padding: 10px 10px;
-    font-size: 35px;
-    font-family: 'Ubuntu', sans-serif;
-    z-index: 100;
-       
-    h1 {
-        text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: #1127a3;
+  color: #fff;
+  padding: 10px 10px;
+  font-size: 35px;
+  font-family: 'Ubuntu', sans-serif;
+  z-index: 100;
+
+  h1 {
+    text-align: center;
+  }
+
+  #btn_popup {
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 1px;
+    transition: 0.3s linear;
+
+    &:hover {
+      transition: 0.3s linear;
+      color: #e1fa03;
     }
 
-    #btn_popup {
-        cursor: pointer;
-        margin-left: 10px;
-        padding: 1px;
-        transition: 0.3s linear;
-
-        &:hover {
-            transition: 0.3s linear;
-            color: #e1fa03;
-        }
-
-        img {
-            width: 35px;
-        }
+    img {
+      width: 35px;
     }
+  }
 }
 
-
 .preloader {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    z-index: 20000;
-    transition: 1s all;
-    opacity: 1;
-    visibility: visible;
-    
-    .loader {
-        width: 75px;
-        height: 75px;
-        border: 10px solid rgb(17, 39, 163);
-        border-radius: 50%;
-        border-top-color: rgb(255, 0, 13);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        animation: 2s spin infinite linear;
-    }
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 20000;
+  transition: 1s all;
+  opacity: 1;
+  visibility: visible;
 
-    &.done {
-      opacity: 0;
-      visibility: hidden;  
-    }
+  .loader {
+    width: 75px;
+    height: 75px;
+    border: 10px solid rgb(17, 39, 163);
+    border-radius: 50%;
+    border-top-color: rgb(255, 0, 13);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: 2s spin infinite linear;
+  }
+
+  &.done {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @keyframes spin {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 .header_fixed {
-    opacity: 0.85;
+  opacity: 0.85;
 }
 
 @media screen and (max-width: 699px) {
-    .header {
-        font-size: 28px;
-    }
+  .header {
+    font-size: 28px;
+  }
 }
 
 @media screen and (max-width: 499px) {
-    .header {
-        font-size: 21px;
-        padding: 10px 5px;
-    }
+  .header {
+    font-size: 21px;
+    padding: 10px 5px;
+  }
 }

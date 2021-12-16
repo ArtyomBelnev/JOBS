@@ -1,121 +1,151 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0"/>
-    <link rel="stylesheet" href="./styles/fonts.css">
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="shortcut icon" href="./images/calculator.ico" type="image/x-icon">
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="shortcut icon" href="./images/calculator.ico" type="image/x-icon" />
     <title>Расчеты</title>
     <script src="./js/main.js" defer></script>
-</head>
-<body>
+  </head>
+  <body oncontextmenu="return false;">
+    <div id="password" style="opacity: 1; visibility: visible">
+      <p><strong>Пароль:</strong> <input id="checkPass" type="password" maxlength="10" size="8" name="password" /></p>
+    </div>
 
     <div id="page__preloader" class="preloader">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
     <header class="header content">
-        <h1>Расчет производительности ГПА</h1>
-        <h2 id="btn_popup"><img src="./images/book.png" alt=""></h2>
+      <h1>Расчет производительности ГПА</h1>
+      <h2 id="btn_popup"><img src="./images/book.png" alt="" /></h2>
     </header>
     <main class="main content">
-        <div class="wraper">
-            <div class="check_type">
-                <h2>ГПА-Ц-6,3</h2>
-                <div>
-                  <p id="nGPA">1</p>
-                  <button disabled id="nGPA_D">-</button>
-                  <button id="nGPA_U">+</button>
-                </div>
-            </div>
+      <div class="wraper">
+        <div class="check_type">
+          <h2>ГПА-Ц-6,3</h2>
+          <div>
+            <p id="nGPA">1</p>
+            <button disabled id="nGPA_D">-</button>
+            <button id="nGPA_U">+</button>
+          </div>
         </div>
-      
-        <div class="inputs">
-            <div class="vl-1">
-              <div class="input_left"><p><i>P<sub> вx.н.</sub> =</i></p></div>
-              <div class="input_center"><div id="ins_vl-1"></div></div>
-              <div class="input_right"><p>МПа</p></div> 
-            </div>
-            <div class="vl-2">
-              <div class="input_left"><p><i>P<sub> выx.н.</sub> =</i></p></div>
-              <div class="input_center"><div id="ins_vl-2"></div></div>
-              <div class="input_right"><p>МПа</p></div> 
-            </div>
-            <div class="vl-3">
-              <div class="input_left"><p><i>T<sub> вx.н.</sub> =</i></p></div>
-              <div class="input_center"><div id="ins_vl-3"></div></div>
-              <div class="input_right"><p>&#8451;</p></div>   
-            </div>
-            <div class="vl-4">
-              <div class="input_left"><p><i>T<sub> выx.н.</sub> =</i></p></div>
-              <div class="input_center"><div id="ins_vl-4"></div></div>
-              <div class="input_right"><p>&#8451;</p></div>  
-            </div>
-            <div class="vl-5">
-              <div class="input_left"><p><i>dP<sub>конф.</sub> =</i></p></div>
-              <div class="input_center"><div id="ins_vl-5"></div></div>
-              <div class="input_right"><p>кПa</p></div>     
-            </div>
-            <div class="vl-6">
-              <div class="input_left"><p><i>n<sub>cт</sub> =</i></p></div>
-              <div class="input_center"><div id="ins_vl-6"></div></div>
-              <div class="input_right"><p>об/мин</p></div>    
-            </div>
-            <div class="vl-7">
-              <div class="input_left"><p><i>&rho;<sub>0</sub> =</i></p></div>
-              <div class="input_center"><div id="ins_vl-7"></div></div>
-              <div class="input_right"><p>кг/м<sup>3</sup></p></div>       
-            </div>
+      </div>
+
+      <div class="inputs">
+        <div class="vl-1">
+          <div class="input_left">
+            <p>
+              <i>P<sub> вx.н.</sub> =</i>
+            </p>
+          </div>
+          <div class="input_center"><div id="ins_vl-1"></div></div>
+          <div class="input_right"><p>МПа</p></div>
         </div>
-        <div class="buttons">
-            <button id="button_cancel" disabled>Отмена</button>
-            <button id="button_ok" disabled>Рассчитать</button>
+        <div class="vl-2">
+          <div class="input_left">
+            <p>
+              <i>P<sub> выx.н.</sub> =</i>
+            </p>
+          </div>
+          <div class="input_center"><div id="ins_vl-2"></div></div>
+          <div class="input_right"><p>МПа</p></div>
         </div>
-        <div class="animation disabled">
-            <img src="./images/loading-54.gif" alt="">
+        <div class="vl-3">
+          <div class="input_left">
+            <p>
+              <i>T<sub> вx.н.</sub> =</i>
+            </p>
+          </div>
+          <div class="input_center"><div id="ins_vl-3"></div></div>
+          <div class="input_right"><p>&#8451;</p></div>
         </div>
-        <div class="rezult disabled">
-            <div class="rezult_1s">
-                <div class="rezult_1s_left">Произв. коммерч. :</div>
-                <div class="rezult_1s_right" id="Q_pr"></div>
-            </div>
-            <div class="rezult_1s">
-                <div class="rezult_1s_left">Произв. объемная :</div>
-                <div class="rezult_1s_right" id="Q_1n"></div>
-            </div>
-            <div class="rezult_1s">
-                <div class="rezult_1s_left">Мощность ЦБН :</div>
-                <div class="rezult_1s_right" id="N_i"></div>
-            </div>
-            <div class="rezult_1s">
-                <div class="rezult_1s_left">Степень сжатия :</div>
-                <div class="rezult_1s_right" id="E_i"></div>
-            </div>
+        <div class="vl-4">
+          <div class="input_left">
+            <p>
+              <i>T<sub> выx.н.</sub> =</i>
+            </p>
+          </div>
+          <div class="input_center"><div id="ins_vl-4"></div></div>
+          <div class="input_right"><p>&#8451;</p></div>
         </div>
-        <div class="return ">
-            <button id="button_return" class="disabled">
-                Назад
-            </button>
+        <div class="vl-5">
+          <div class="input_left">
+            <p>
+              <i>dP<sub>конф.</sub> =</i>
+            </p>
+          </div>
+          <div class="input_center"><div id="ins_vl-5"></div></div>
+          <div class="input_right"><p>кПa</p></div>
         </div>
+        <div class="vl-6">
+          <div class="input_left">
+            <p>
+              <i>n<sub>cт</sub> =</i>
+            </p>
+          </div>
+          <div class="input_center"><div id="ins_vl-6"></div></div>
+          <div class="input_right"><p>об/мин</p></div>
+        </div>
+        <div class="vl-7">
+          <div class="input_left">
+            <p>
+              <i>&rho;<sub>0</sub> =</i>
+            </p>
+          </div>
+          <div class="input_center"><div id="ins_vl-7"></div></div>
+          <div class="input_right">
+            <p>кг/м<sup>3</sup></p>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="button_cancel" disabled>Отмена</button>
+        <button id="button_ok" disabled>Рассчитать</button>
+      </div>
+      <div class="animation disabled">
+        <img src="./images/loading-54.gif" alt="" />
+      </div>
+      <div class="rezult disabled">
+        <div class="rezult_1s">
+          <div class="rezult_1s_left">Произв. коммерч. :</div>
+          <div class="rezult_1s_right" id="Q_pr"></div>
+        </div>
+        <div class="rezult_1s">
+          <div class="rezult_1s_left">Произв. объемная :</div>
+          <div class="rezult_1s_right" id="Q_1n"></div>
+        </div>
+        <div class="rezult_1s">
+          <div class="rezult_1s_left">Мощность ЦБН :</div>
+          <div class="rezult_1s_right" id="N_i"></div>
+        </div>
+        <div class="rezult_1s">
+          <div class="rezult_1s_left">Степень сжатия :</div>
+          <div class="rezult_1s_right" id="E_i"></div>
+        </div>
+      </div>
+      <div class="return">
+        <button id="button_return" class="disabled">Назад</button>
+      </div>
     </main>
     <footer class="footer content">
-        <h1>Несвижкое УМГ 2020 г. </h1>
+      <h1>Несвижкое УМГ 2020 г.</h1>
     </footer>
     <div id="popup" class="popup">
-        <div class="popup__body">
-            <div class="popup__content">
-                <div class="popup__close">X</div>
-                <div class="popup__title">Cправка</div>
-                <div class="popup__text">
-                   <p>Все формулы были взяты с "МЕТОДИКИ ПРОВЕДЕНИЯ ЭНЕРГОАУДИТА КОМПРЕССОРНОЙ СТАНЦИИ, КОМПРЕССОРНЫХ ЦЕХОВ С ГАЗОТУРБИННЫМИ И ЭЛЕКТРОПРИВОДНЫМИ ГПА"
-                    СТО Газпром 2"1.20"122"2007</p> 
-                   <h3>Автор сайта: <span>А.О. Бельнев (a.belnev@btg.by)</span></h3>
-                </div>
-            </div>
+      <div class="popup__body">
+        <div class="popup__content">
+          <div class="popup__close">X</div>
+          <div class="popup__title">Cправка</div>
+          <div class="popup__text">
+            <p>Все формулы были взяты с "МЕТОДИКИ ПРОВЕДЕНИЯ ЭНЕРГОАУДИТА КОМПРЕССОРНОЙ СТАНЦИИ, КОМПРЕССОРНЫХ ЦЕХОВ С ГАЗОТУРБИННЫМИ И ЭЛЕКТРОПРИВОДНЫМИ ГПА" СТО Газпром 2"1.20"122"2007</p>
+            <h3>Автор сайта: <span>А.О. Бельнев (a.belnev@btg.by)</span></h3>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
